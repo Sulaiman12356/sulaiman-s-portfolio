@@ -1,0 +1,285 @@
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* background: #0A192F; */
+/* background-color: rgb(1, 31, 77); footer */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  /* background: #0A192F; */
+  /* background: linear-gradient(to bottom right, rgb(2, 27, 66), rgb(4, 45, 92)); Navy to Royal Blue */
+  background: linear-gradient(to bottom right, rgb(9, 1, 54), rgb(1, 0, 59)); /* Navy to Royal Blue */
+ 
+  color: #E0E0E0;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(3, 8, 80);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #00BFFF;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #E0E0E0;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  text-align: center;
+  font-style: bold;
+  color: rgb(255, 255, 255);
+  background-color: #00BFFF;
+  padding: 20px 80px;
+}
+
+.toggle-theme {
+  background-color: #1f00cf;
+  background: transparent;
+  color: #00BFFF;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: #00BFFF;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.home-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  border-block-end-color: #00BFFF;
+  background: linear-gradient(to bottom right, rgb(9, 1, 54), rgb(1, 0, 59)); /* Navy to Royal Blue */
+  /* background: #0A192F; */
+}
+
+.home-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-content h2 {
+  font-size: 1.2rem;
+  color: #00BFFF;
+  margin-bottom: 1rem;
+}
+
+.home-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #00BFFF;
+  color: #0A192F;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0080B3;
+}
+
+.home-image {
+  flex: 1;
+  text-align: center;
+}
+
+.home-image img {
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #00BFFF;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00BFFF;
+}
+
+/* About, Services, Portfolio, Pricing */
+.about-section p,
+.services-section p,
+.portfolio-section p,
+.pricing-section p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+ul {
+  
+  list-style: none;
+  padding-left: 30px;
+  
+}
+
+ul li {
+
+  margin-bottom: 0.8rem;
+}
+
+.order li::before {
+  content: "✓ ";
+  color: #00BFFF;
+  font-weight: bold;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service,
+.pricing-card {
+  background-color: #002763;
+  padding: 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover,
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-card h3 {
+  color: #00BFFF;
+}
+
+/* Contact Section */
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin-top: 2rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.contact-section button {
+  background: #00BFFF;
+  color: #0A192F;
+  padding: 0.8rem;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-section button:hover {
+  background: #0080B3;
+}
+
+/* Footer */
+.footer {
+  background-color: rgb(3, 8, 80);
+  padding: 2rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 0.6rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.whatsapp-float img {
+  width: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0A192F;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .home-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-content, .home-image {
+    flex: 1 1 100%;
+  }
+}
